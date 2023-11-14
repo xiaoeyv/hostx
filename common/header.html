@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="theme-color" content="#0060fe">
+  <meta name="title" content="{$setting.company_name}">
+  <meta name="keywords" content="{$setting.web_seo_keywords}">
+  <meta name="description" content="{$setting.web_seo_desc}">
+  <meta name="language" content="ch">
+  <link rel="icon" href="{$CustomDepot.favicon}" type="image/x-icon">
+  <!-- link -->
+  <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/css/bundle.min.css">
+  <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/css/fonts.min.css">
+  <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/css/style.css">
+  <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/css/templates.css">
+  <!-- title -->
+  <title>{$setting.company_name} - [title]</title>
+  <style>
+      .useravatar{
+          width: 35px;
+          height: 35px;
+      }
+  </style>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="position-relative [page]-page {$CustomDepot.theme}-theme" id="[page]-page">
+
+  <!-- Preloader -->
+  <!--<div class="preloader" id="preloader">-->
+  <!--  <div class="content d-flex align-items-center justify-content-center">-->
+  <!--    <div class="spinner"></div>-->
+  <!--  </div>-->
+  <!--</div>  -->
+
+  <!-- Navbar -->
+  <nav class="theme-navbar" id="theme-navbar">
+    <!-- notices-bar -->
+    <div class="notices-bar" id="notices-bar">
+      <div class="container-fluid">
+        <!-- content -->
+        <div class="content">
+          <!-- text -->
+          <p class="text">{$CustomDepot.notice|raw}</p>
+          <!-- action-btn -->
+          <a href="/cart" class="action-btn">立即订购</a>
+          <!-- close-btn -->
+          <div class="close-btn" id="close-notices-bar-btn">
+            <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/close.png" class="img-fluid" alt="Down Arrow">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <!-- nav-top -->
+      <div class="nav-top d-flex align-items-center">
+        <!-- menu-icon -->
+        <div class="menu-icon" id="open-links-btn">
+          <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/hamburger.png" class="menu-icon img-fluid" alt="{$setting.company_name}">
+        </div>
+        <!-- brand -->
+        <a href="#" class="brand d-flex align-items-center">
+		<img src="{$setting.web_logo}" class="dt-img img-fluid" alt="{$setting.company_name}"> <!-- 此处为黑暗主题显示的logo， 大小在CSS中进行了限制 -->
+		<img src="{$setting.web_logo}" class="lt-img img-fluid" alt="{$setting.company_name}"> <!-- 此处为明亮主题显示的logo， 大小在CSS中进行了限制 -->
+		</a>
+        <!-- options -->
+        <div class="options d-md-flex d-none align-items-center justify-content-end ml-auto">
+          <!-- c-link -->
+          <a href="#" class="c-link">
+            <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/gear.png" class="icon" alt="icon">
+            <span class="text">主机 控制面板</span>
+          </a>
+          <!-- c-link -->
+          <a href="#" class="c-link">
+            <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/network.png" class="icon" alt="icon">
+            <span class="text">VPS 控制面板</span>
+          </a>
+          <!-- buttons -->
+          <div class="buttons">
+            <a href="/clientarea" class="btn btn-fill-primary btn-sm btn-rounded shadow-off text-uppercase mr--sm">控制台</a>
+            {if $userInfo}
+            <a href="/clientarea" class="btn btn-outline-dark btn-sm btn-rounded shadow-off text-uppercase">{$userInfo.username}</a>
+            {else}
+            <a href="/login" class="btn btn-outline-dark btn-sm btn-rounded shadow-off text-uppercase">登录</a>
+            {/if}
+          </div>
+          <!-- lang -->
+          <div class="lang" id="lang">
+            <!-- lang-menu -->
+          <a href="#" class="c-link">
+            <img src="https://www.niaoyun.com/template/User/Niaoyun/PC/Static/css/ucModule/home/img/user_avatar.png" class="useravatar" alt="Icon">
+          </a>
+          </div>
+        </div>
+        <!-- second-options -->
+        <div class="second-options d-md-none d-flex align-content-center justify-content-end ml-auto">
+          <!-- o-link -->
+          <a href="/knowledgebase" class="o-link">
+            <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/question-mark.png" class="icon" alt="Icon">
+          </a>
+          <!-- o-link -->
+          <div class="o-link user-link" id="user-menu-btn">
+						    {if $userInfo}
+                                <img src="https://www.niaoyun.com/template/User/Niaoyun/PC/Static/css/ucModule/home/img/user_avatar.png" class="icon" alt="Icon">
+							<!--user-dropdown-menu-->
+							<ul class="user-dropdown-menu list-unstyled" id="user-dropdown-menu">
+								<!--uddm-link-parent-->
+								<li class="uddm-link-parent">
+									<div class="title-2">
+										UID：{$userInfo.id}
+									</div>
+									<p class="para-2">
+										用户名：{$userInfo.username}
+									</p>
+									<p class="para-2">
+										余额：{$userInfo.credit}
+									</p>
+									<a href="/clientarea" class="uddm-link">
+										控制台
+									</a>
+								</li>
+								<li class="uddm-link-parent">
+									<a href="/logout" class="uddm-link">
+										退出账户
+									</a>
+								</li>
+							</ul>
+						    {else}
+							<img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/profile.png" class="icon" alt="Icon">
+							<!--user-dropdown-menu-->
+							<ul class="user-dropdown-menu list-unstyled" id="user-dropdown-menu">
+								<!--uddm-link-parent-->
+								<li class="uddm-link-parent">
+									<div class="title-2">
+										注册用户
+									</div>
+									<p class="para-2">
+										已经有账户？前往登录
+									</p>
+									<a href="{$setting.web_url}/login" class="uddm-link">
+										登录
+									</a>
+								</li>
+								<!--uddm-link-parent-->
+								<li class="uddm-link-parent">
+									<div class="title-2">
+										新用户
+									</div>
+									<p class="para-2">
+										第一次使用{$setting.company_name}？创建一个帐户。
+									</p>
+									<a href="{$setting.web_url}/register" class="uddm-link">
+										创建一个帐户
+									</a>
+								</li>
+							</ul>
+							{/if}
+          </div>
+          <!-- o-link -->
+          <a href="#" class="o-link">
+            <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/cart.png" class="icon" alt="Icon">
+          </a>
+        </div>
+      </div>
+      <!-- nav-bottom -->
+      <div class="nav-bottom d-flex align-items-center justify-content-between">
+        <!-- info -->
+        <div class="info d-flex align-items-center">
+          <!-- item -->
+          <a href="tel:0000" class="item">
+            <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/fill-font-icons/fi-sr-phone-call.svg" class="img-fluid" alt="Icon">
+            <span class="text">(+86) {$setting.company_phone}</span>
+          </a>
+        </div>
+        <!-- links -->
+        <div class="links d-xl-flex align-items-center ml-auto" id="theme-navbar-links">
+          <!-- close-links-btn -->
+          <div class="close-links-btn" id="close-links-btn">
+            <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/close.png" class="img-fluid" alt="Close">
+          </div>
+          <!-- link -->
+          <div class="link active">
+            <a href="./">首页</a>
+          </div>
+          <!-- link -->
+          <div class="link has-dropdown-menu">
+            <a href="#">产品分类</a>
+            <!-- dropdown-menu -->
+            <ul class="dropdown-menu list-unstyled">
+              <!-- group-title -->
+              {foreach $www_top[1]['son'] as $key =>$val}
+                <li class="group-title">{$val.name}</li>
+                {foreach $val.son as $k =>$v}
+                <li><a href="{$v.url}" class="dm-link">{$v.name}</a></li>
+                {/foreach}
+              {/foreach}
+            </ul>
+          </div>
+          <div class="link">
+            <a href="/cloud.html">VPS云主机</a>
+          </div>
+          <div class="link">
+            <a href="/host.html">虚拟主机</a>
+          </div>
+        <div class="link">
+            <a href="/servers.html">独立服务器</a>
+          </div>
+          <div class="link">
+            <a href="/domains.html">域名注册</a>
+          </div>
+        <div class="link">
+            <a href="/about.html">关于我们</a>
+          </div>
+          <!-- indicator -->
+          <span class="indicator"></span>
+        </div>
+        <!-- side-box-btn -->
+        <div class="side-box-btn" id="side-box-btn">
+            <span class="lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>服务
+        </div>
+      </div>
+      <!-- side-box -->
+      <div class="side-box scroll-area" id="side-box">
+        <!-- mega-menu -->
+        <div class="mega-menu">
+          <!-- f-nav -->
+          <div class="f-nav d-flex align-items-center justify-content-start flex-wrap">
+            <span class="f-nav-tab active" data-filter="all">全部</span>
+          </div>
+          <!-- content -->
+          <div class="content">
+            <!-- f-area & all -->
+            <div class="f-area all">
+              <!-- others -->
+              <div class="others">
+                <!-- cate-title -->
+                <h3 class="cate-title">产品</h3>
+                <!-- items -->
+                <div class="items">
+                  <!-- item -->
+                  <a href="/cloud.html" class="item">
+                    <!-- icon -->
+                    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/data-protection.svg" class="icon img-fluid" alt="Icon">
+                    <!-- item-con -->
+                    <span class="item-con">
+                        <span class="name">VPS云主机</span>
+                        <span class="des">独立IP、磁盘空间、内存、CPU资源、进程和系统配置</span>
+                      </span>
+                  </a>
+                  <!-- item -->
+                  <a href="/host.html" class="item">
+                    <!-- icon -->
+                    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/globe.svg" class="icon img-fluid" alt="Icon">
+                    <!-- item-con -->
+                    <span class="item-con">
+                        <span class="name">虚拟主机</span>
+                        <span class="des">共享一个IP,可以运行多个网站或服务</span>
+                      </span>
+                  </a>
+                  <!-- item -->
+                  <a href="/servers.html" class="item">
+                    <!-- icon -->
+                    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/server.svg" class="icon img-fluid" alt="Icon">
+                    <!-- item-con -->
+                    <span class="item-con">
+                        <span class="name">独立服务器</span>
+                        <span class="des">支持虚拟化</span>
+                      </span>
+                  </a>
+                  <!-- item -->
+                  <a href="/cart" class="item">
+                    <!-- icon -->
+                    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/laptop.svg" class="icon img-fluid" alt="Icon">
+                    <!-- item-con -->
+                    <span class="item-con">
+                        <span class="name">SSL证书</span>
+                        <span class="des">TLS与SSL在传输层与应用层之间对网络连接进行加密</span>
+                      </span>
+                  </a>
+                  <!-- item -->
+                  <a href="/domains.html" class="item">
+                    <!-- icon -->
+                    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/server-1.svg" class="icon img-fluid" alt="Icon">
+                    <!-- item-con -->
+                    <span class="item-con">
+                        <span class="name">域名注册</span>
+                        <span class="des">全球域名注册服务</span>
+                      </span>
+                  </a>
+                  <!-- item -->
+                  <a href="/cart" class="item">
+                    <!-- icon -->
+                    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/shield.svg" class="icon img-fluid" alt="Icon">
+                    <!-- item-con -->
+                    <span class="item-con">
+                        <span class="name">CDN内容分发</span>
+                        <span class="des">降低网络拥塞，提高用户访问响应速度和命中率</span>
+                      </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- close-side-box-btn -->
+        <div class="close-side-box-btn" id="close-side-box-btn">
+          <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/navbar/close.png" class="img-fluid" alt="Close">
+        </div>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,868 @@
+{include file="common/header"  title="$CustomDepot.title" page="index"/}
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/css/index.css">
+<!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <!-- row -->
+      <div class="row align-items-center">
+        <!-- col -->
+        <div class="col-xl-7 text-xl-left text-center">
+          <!-- title-1 & para-1 -->
+          <h1 class="title-1 text-uppercase mb-2 mx-xl-0 mx-auto">VPS 主机<br>功能强大且可靠！</h1>
+          <p class="para-1 mb-2 mx-xl-0 mx-auto">基于KVM虚拟技术，采用OVS网络，支持各种高级网络特性，功能完善、快速部署、稳定安全</p>
+          <!-- notify -->
+          <div class="notify glassy mb-4">
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/bell.svg" class="lazy img-fluid" alt="Bell">
+            </div>
+            <div class="text">我们不收集用户任何个人信息</div>
+          </div>
+          <!-- buttons -->
+          <div class="buttons">
+            <a href="/cart" class="btn btn-fill-primary shadow-off mr-1 mb-md-0 mb-1">查看产品</a>
+            <a href="/clientarea" class="btn btn-outline-dark shadow-off">用户中心</a>
+          </div>
+        </div>
+
+        <!-- col -->
+        <div class="col-xl-5 d-xl-block d-none">
+          <!-- form-container -->
+          <div class="form-container" id="form-container">
+            <!-- header-form -->
+            <form action="#" method="POST" class="header-form ml-auto" id="header-form">
+
+              <!-- form-title -->
+              <h2 class="form-title mb-2">登录{$setting.company_name}<br>开始选购您的云产品吧</h2>
+
+              <!-- inputs -->
+              <!--<div class="inputs">-->
+
+                <!-- form-label -->
+              <!--  <label for="email" class="form-label">-->
+              <!--    <input type="text" name="login-account" class="glassy" placeholder="手机号码/邮箱地址" autocomplete="off" required>-->
+              <!--  </label>-->
+
+                <!-- form-label -->
+              <!--  <label for="password" class="form-label">-->
+              <!--    <input type="password" name="login-password" class="glassy" placeholder="密码" required>-->
+              <!--  </label>-->
+
+              <!--</div>-->
+
+              <!-- submit-button -->
+              <!--<button type="button" onclick="login()" class="btn btn-fill-success shadow-off w-100 font-500 mb-2 mt-1">登录</button>-->
+              <a href="/login" class="btn btn-fill-primary shadow-off w-100 font-500 mb-2 mt-1">登录</a>
+              <a href="/register" class="btn btn-fill-success shadow-off w-100 font-500 mb-2 mt-1">注册</a>
+              <!-- hr -->
+              <!--<div class="hr position-relative"><span>或注册</span></div>-->
+              <!-- links -->
+              <!--<div class="row small-gutters mt-2">-->
+                <!-- col -->
+              <!--  <div class="col-6">-->
+              <!--    <a href="/register" class="btn btn-outline-dark level-up shadow-off w-100 font-500">注册</a>-->
+              <!--  </div>-->
+              <!--  <div class="col-6">-->
+              <!--    <a href="/pwreset" class="btn btn-outline-dark level-up shadow-off w-100 font-500">找回密码</a>-->
+              <!--  </div>-->
+              <!--</div>-->
+              <!-- form-comment -->
+              <div class="form-comment mt-2">注册登录即表示您同意<a href="{$setting.web_tos_url}">服务条款</a>和<a href="{$setting.web_privacy_url}">隐私政策</a></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Section I -->
+  <div class="se-i text-lg-left text-center">
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <!-- col -->
+        <div class="col-lg-3 col-6 mb-lg-0 mb-2">
+          <!-- box -->
+          <div class="box">
+            <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/mail.svg" class="lazy box-icon" alt="Mail">
+            <h2 class="box-title mb-0">实时通知</h2>
+          </div>
+        </div>
+
+        <!-- col -->
+        <div class="col-lg-3 col-6 mb-lg-0 mb-2">
+          <!-- box -->
+          <div class="box">
+            <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/logout.svg" class="lazy box-icon" alt="Logout">
+            <h2 class="box-title mb-0">操作日志</h2>
+          </div>
+        </div>
+
+        <!-- col -->
+        <div class="col-lg-3 col-6">
+          <!-- box -->
+          <div class="box">
+            <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/digital.svg" class="lazy box-icon" alt="Digital">
+            <h2 class="box-title mb-0">高速网络</h2>
+          </div>
+        </div>
+
+        <!-- col -->
+        <div class="col-lg-3 col-6">
+          <!-- box -->
+          <div class="box">
+            <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/wishlist.svg" class="lazy box-icon" alt="Wishlist">
+            <h2 class="box-title mb-0">100%性能</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section II -->
+  <div class="se-ii bg-2">
+    <div class="container">
+      <!-- row -->
+      <div class="row align-items-center">
+        <!-- col -->
+        <div class="col-xl-4 col-12 text-xl-left text-center mb-xl-0 mb-5">
+          <!-- title-1 -->
+          <h2 class="title-1 mb-1">
+            <span>丰富的操作系统</span><br class="d-xl-block d-none">
+            <span class="primary-color">供您选择</span>
+          </h2>
+          <!-- para-1 -->
+          <p class="para-1 mb-0">举例说明我们支持的操作系统</p>
+        </div>
+        <!-- col -->
+        <div class="col-xl-8 col-12">
+          <!-- row -->
+          <div class="row justify-content-center">
+            <!-- col -->
+            <div class="col-lg-2 col-md-3 col-6">
+              <!-- item -->
+              <div class="item text-center">
+                <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/os/windows.png" class="lazy img-fluid" alt="Windows">
+                <h3 class="text mb-0">Windows</h3>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-2 col-md-3 col-6">
+              <!-- item -->
+              <div class="item text-center">
+                <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/os/android.png" class="lazy img-fluid" alt="Android">
+                <h3 class="text mb-0">Android</h3>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-2 col-md-3 col-6">
+              <!-- item -->
+              <div class="item text-center">
+                <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/os/ubuntu.png" class="lazy img-fluid" alt="Ubuntu">
+                <h3 class="text mb-0">Ubuntu</h3>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-2 col-md-3 col-6">
+              <!-- item -->
+              <div class="item text-center">
+                <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/os/debian.png" class="lazy img-fluid" alt="Debian">
+                <h3 class="text mb-0">Debian</h3>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-2 col-md-3 col-6">
+              <!-- item -->
+              <div class="item text-center">
+                <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/os/centos.png" class="lazy img-fluid" alt="CentOS">
+                <h3 class="text mb-0">CentOS</h3>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="col-lg-2 col-md-3 col-6">
+              <!-- item -->
+              <div class="item text-center">
+                <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/os/open-suse.png" class="lazy img-fluid" alt="Open Suse">
+                <h3 class="text mb-0">Open Suse</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section III -->
+  <div class="se-iii py-90">
+    <div class="container">
+      <!-- se-head -->
+      <div class="se-head">
+        <h3 class="se-title-1">关于我们的托管计划</h3>
+        <h4 class="se-title-2">使用我们的产品可以获得更多功能</h4>
+      </div>
+				<!--plans-->
+				<div class="plans mb-xl-4 mb-2">
+					<!--row-->
+					<div class="row mx-xl-0">
+						<!--col-->
+						<div class="col-xl-3 col-md-6 mb-xl-0 mb-2 px-xl-0">
+							<!--plan-->
+							<div class="plan">
+								<!--plan-head-->
+								<div class="plan-head">
+									<!--plan-name-->
+									<h3 class="plan-name">
+										入门套餐
+									</h3>
+									<!--plan-para-->
+									<p class="plan-para">
+										当您只需要一个站点时。
+									</p>
+								</div>
+								<!--plan-price-->
+								<div class="plan-price">
+									<!--price-->
+									<h4 class="price">
+										￥16
+									</h4>
+									<!--price-comment-->
+									<p class="price-comment">
+										香港将军澳数据中心
+									</p>
+								</div>
+								<!--actions-->
+								<div class="actions">
+									<a href="/cart" class="btn btn-fill-primary btn-sm shadow-off w-100">
+										选择入门套餐
+									</a>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										机器配置
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											CPU：1核心【E5 2660v2x2】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											内存：1G【DDR3】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											硬盘：30G【SSD】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											带宽：5M
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										其他
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											1个IPv4
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											不限流量
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											电信CN2回国优化三网GIA
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											无防御
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										还包括
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 异地备份
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 快照
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											7*24售后服务
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--col-->
+						<div class="col-xl-3 col-md-6 mb-xl-0 mb-2 px-xl-0">
+							<!--plan-->
+							<div class="plan popular-plan">
+								<!--plan-head-->
+								<div class="plan-head">
+									<!--plan-name-->
+									<h3 class="plan-name">
+										基础套餐
+									</h3>
+									<!--plan-para-->
+									<p class="plan-para">
+										对于那些运行多个站点的人。
+									</p>
+								</div>
+								<!--plan-price-->
+								<div class="plan-price">
+									<!--price-->
+									<h4 class="price">
+										￥28
+									</h4>
+									<!--price-comment-->
+									<p class="price-comment">
+										香港将军澳数据中心
+									</p>
+								</div>
+								<!--actions-->
+								<div class="actions">
+									<a href="/cart" class="btn btn-fill-primary btn-sm shadow-off w-100">
+										选择基础套餐
+									</a>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										机器配置
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											CPU：2核心【E5 2660v2x2】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											内存：2G【DDR3】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											硬盘：40G【SSD】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											带宽：8M
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										其他
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											1个IPv4
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											不限流量
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											电信CN2回国优化三网GIA
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											无防御
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											支持Windows系统
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										还包括
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 异地备份
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 快照
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											7*24售后服务
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--col-->
+						<div class="col-xl-3 col-md-6 mb-xl-0 mb-2 px-xl-0">
+							<!--plan-->
+							<div class="plan">
+								<!--plan-head-->
+								<div class="plan-head">
+									<!--plan-name-->
+									<h3 class="plan-name">
+										高级套餐
+									</h3>
+									<!--plan-para-->
+									<p class="plan-para">
+										增加了隐私和安全功能
+									</p>
+								</div>
+								<!--plan-price-->
+								<div class="plan-price">
+									<!--price-->
+									<h4 class="price">
+										￥50
+									</h4>
+									<!--price-comment-->
+									<p class="price-comment">
+										香港将军澳数据中心
+									</p>
+								</div>
+								<!--actions-->
+								<div class="actions">
+									<a href="/cart" class="btn btn-fill-primary btn-sm shadow-off w-100">
+										选择高级套餐
+									</a>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										机器配置
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											CPU：4核心【E5 2660v2x2】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											内存：4G【DDR3】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											硬盘：50G【SSD】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											带宽：10M
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										其他
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											1个IPv4
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											不限流量
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											电信CN2回国优化三网GIA
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											无防御
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											支持Windows系统
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										还包括
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 CDN
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 异地备份
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 快照
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											7*24售后服务
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--col-->
+						<div class="col-xl-3 col-md-6 mb-xl-0 mb-2 px-xl-0">
+							<!--plan-->
+							<div class="plan">
+								<!--plan-head-->
+								<div class="plan-head">
+									<!--plan-name-->
+									<h3 class="plan-name">
+										企业套餐
+									</h3>
+									<!--plan-para-->
+									<p class="plan-para">
+										通过优化的 Web 资源获得更多功能。
+									</p>
+								</div>
+								<!--plan-price-->
+								<div class="plan-price">
+									<!--price-->
+									<h4 class="price">
+										￥100
+									</h4>
+									<!--price-comment-->
+									<p class="price-comment">
+										香港将军澳数据中心
+									</p>
+								</div>
+								<!--actions-->
+								<div class="actions">
+									<a href="/cart" class="btn btn-fill-primary btn-sm shadow-off w-100">
+										选择企业套餐
+									</a>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										机器配置
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											CPU：8核心【E5 2660v2x2】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											内存：8G【DDR3】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											硬盘：100G【SSD】
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											带宽：15M
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										其他
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											1个IPv4
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											不限流量
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											电信CN2回国优化三网GIA
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											无防御
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											支持Windows系统
+										</li>
+									</ul>
+								</div>
+								<!--group-->
+								<div class="group">
+									<!--title-4-->
+									<h4 class="title-4">
+										还包括
+									</h4>
+									<!--list-->
+									<ul class="list list-unstyled">
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 CDN
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 异地备份
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费 快照
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											7*24售后服务
+										</li>
+										<li>
+											<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle-2.svg" class="lazy img-fluid" alt="Icon">
+											免费技术支持
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--se-footer-->
+				<div class="se-footer d-flex align-items-center justify-content-center flex-wrap">
+					<!--line-->
+					<div class="line d-flex align-items-center justify-content-start">
+						<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle.svg" class="lazy icon img-fluid" alt="Check">
+						<span class="text">
+							每月备份
+						</span>
+					</div>
+					<!--line-->
+					<div class="line d-flex align-items-center justify-content-start">
+						<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle.svg" class="lazy icon img-fluid" alt="Check">
+						<span class="text">
+							免费的技术支持
+						</span>
+					</div>
+					<!--line-->
+					<div class="line d-flex align-items-center justify-content-start">
+						<img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/check-circle.svg" class="lazy icon img-fluid" alt="Check">
+						<span class="text">
+							7*24售后服务
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+  <!-- Section IV -->
+  <div class="se-iv py-90 bg-2">
+    <div class="container">
+      <!-- se-head -->
+      <div class="se-head">
+        <h3 class="se-title-1">不仅仅是一个工具</h3>
+        <h4 class="se-title-2">您完全免费获得的精美 VPS 功能</h4>
+      </div>
+      <!-- space -->
+      <div class="space space-sm"></div>
+      <!-- row -->
+      <div class="row justify-content-center">
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
+          <!-- box -->
+          <div class="box color-1">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/businessman.svg" class="lazy img-fluid" alt="businessman">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">在线客服</h4>
+            <!-- box-para -->
+            <p class="box-para">专业的技术人员7*24小时为您解决售后问题</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
+          <!-- box -->
+          <div class="box color-2">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/priority.svg" class="lazy img-fluid" alt="priority">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">工单支持</h4>
+            <!-- box-para -->
+            <p class="box-para">当您无法与在线客服取得联系时可以使用工单获得帮助</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
+          <!-- box -->
+          <div class="box color-3">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/mission.svg" class="lazy img-fluid" alt="mission">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">高级功能</h4>
+            <!-- box-para -->
+            <p class="box-para">您可以实时查看您的云主机资源使用情况</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
+          <!-- box -->
+          <div class="box color-4">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/hula-hoop.svg" class="lazy img-fluid" alt="hula-hoop">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">控制面板</h4>
+            <!-- box-para -->
+            <p class="box-para">您可以在控制面板对您的VPS主机进行开机、关机、重启、重置密码、重装系统等操作</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
+          <!-- box -->
+          <div class="box color-5">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/data-storage-device.svg" class="lazy img-fluid" alt="data-storage-device">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">备份/快照</h4>
+            <!-- box-para -->
+            <p class="box-para">我们的产品均支持备份以及快照功能</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
+          <!-- box -->
+          <div class="box color-6">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/power.svg" class="lazy img-fluid" alt="power">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">强大的硬件</h4>
+            <!-- box-para -->
+            <p class="box-para">我们的硬件能保证您的云主机超高稳定性，在线率100%</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-lg-0 mb-2">
+          <!-- box -->
+          <div class="box color-1">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/network.svg" class="lazy img-fluid" alt="network">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">网络保障</h4>
+            <!-- box-para -->
+            <p class="box-para">云主机采用OVS网络，支持各种高级网络特性</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <!-- box -->
+          <div class="box color-2">
+            <!-- link -->
+            <a href="#" class="box-link"></a>
+            <!-- icon -->
+            <div class="icon">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/security-on.svg" class="lazy img-fluid" alt="security-on">
+            </div>
+            <!-- box-title -->
+            <h4 class="box-title">DDOS防护</h4>
+            <!-- box-para -->
+            <p class="box-para">所有产品均可以增加DDOS高防IP</p>
+            <!-- arrow -->
+            <div class="arrow text-right">
+              <img data-src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/right-arrow.svg" class="lazy img-fluid" alt="Right-Arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{include file="common/footer"/}

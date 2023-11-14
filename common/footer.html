@@ -1,0 +1,208 @@
+  <!-- theme-settings-btn -->
+  <button type="button" class="theme-settings-btn" id="theme-settings-btn" data-tooltip="主题设置">
+    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/theme-settings/settings-sliders.svg" class="img-fluid" alt="Icon">
+  </button>
+
+  <!-- theme-settings -->
+  <div class="theme-settings" id="theme-settings">
+    <!-- title-1 -->
+    <div class="title-1">网站设置</div>
+    <!-- close-btn -->
+    <div class="close-btn" id="theme-settings-close-btn">
+      <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/theme-settings/close.png" class="img-fluid" alt="Icon">
+    </div>
+    <!-- section -->
+    <div class="section">
+      <!-- section-title -->
+      <div class="section-title">主题</div>
+      <!-- themes -->
+      <div class="themes">
+        <!-- theme-btn -->
+        <div class="theme-btn light-theme active-theme" id="light-theme-btn">
+          <div class="color"></div>
+          <span class="name">明亮的</span>
+        </div>
+        <!-- theme-btn -->
+        <div class="theme-btn dark-theme" id="dark-theme-btn">
+          <div class="color"></div>
+          <span class="name">黑暗的</span>
+        </div>
+      </div>
+    </div>
+    <!-- section -->
+    <div class="section">
+      <!-- section-title -->
+      <div class="section-title">特征</div>    
+      <!-- feature-option -->
+      <div class="feature-option" data-theme-option="desktop-view">
+        <span class="text">桌面视图</span>
+        <span class="switch-btn"></span>
+      </div>
+      <!-- feature-option -->
+      <div class="feature-option" data-theme-option="hide-popups">
+        <span class="text">隐藏热卖弹出窗口</span>
+        <span class="switch-btn"></span>
+      </div>
+    </div>
+    <!-- section -->
+    <div class="section">
+      <!-- section-title -->
+      <div class="section-title">版权所有</div>
+      <!-- copyright-text -->
+      <p class="copyright-text">Copyright © 2022, {$setting.company_name}.All Rights Reserved.</p>
+    </div>
+  </div>
+
+  <!-- Cookies Dialog -->
+  <!--<div class="cookies-dialog" id="cookies-dialog">-->
+  <!--  <div class="container">-->
+      <!-- content -->
+  <!--    <div class="content">-->
+        <!-- title-3 -->
+  <!--      <h3 class="title-3">您的隐私很重要</h3>-->
+        <!-- div -->
+  <!--      <div class="d-lg-flex align-items-end">-->
+          <!-- para-1 -->
+  <!--        <p class="para-1 mr-3">我们使用 cookie 来提供我们的服务以及用于分析和营销。要了解有关我们使用 cookie 的更多信息，请参阅我们的隐私政策和 Cookie 和跟踪通知。继续浏览我们的网站，即表示您同意我们使用 cookie。<br><a href="#">设置</a></p>-->
+          <!-- buttons -->
+  <!--        <div class="buttons text-right">-->
+  <!--          <button type="button" class="btn btn-fill-primary btn-sm shadow-off" id="cookies-dialog-btn">我明白</button>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</div>-->
+  
+  <!-- Contact Bubble -->
+  <!--<div class="contact-bubble">-->
+    <!-- live-chat-btn -->
+  <!--  <a href="#" class="live-chat-btn">-->
+  <!--    <img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/icons/chat.svg" class="img-fluid" alt="Icon">-->
+  <!--    <span class="text">联系客服</span>-->
+  <!--  </a>-->
+  <!--</div>-->
+
+  <!-- Theme Footer -->
+  <footer class="theme-footer">
+    <!-- footer-top -->
+    <div class="footer-top">
+      <div class="container-fluid">
+        <!-- list-group -->
+        <div class="list-group">
+          <!-- footer-list -->
+          <ul class="footer-list list-unstyled">
+            <li class="list-title">关于{$setting.company_name}</li>
+            <li class="list-link"><a href="/news">新闻</a></li>
+          </ul>
+          <!-- footer-list -->
+          <ul class="footer-list list-unstyled">
+            <li class="list-title">帮助中心</li>
+            <li class="list-link"><a href="/knowledgebase">帮助中心</a></li>
+            <li class="list-link"><a href="/news">新闻中心</a></li>
+            <li class="list-link"><a href="#">资源下载</a></li>
+          </ul>
+          <!-- footer-list -->
+          <ul class="footer-list list-unstyled">
+            <li class="list-title">友情链接</li>
+            {volist name="f_links" id="links"}
+                <li class="list-link"><a href="{$links.domain}" target="_blank">{$links.name}</a></li>
+            {/volist}
+          </ul>
+          <!-- footer-list -->
+          <ul class="footer-list list-unstyled">
+            <li class="list-title">账户</li>
+            <li class="list-link"><a href="/clientarea">账户中心</a></li>
+            <li class="list-link"><a href="/cart?action=viewcart">我的购物车</a></li>
+            <li class="list-link"><a href="/login">登录账户</a></li>
+            <li class="list-link"><a href="/register">注册账户</a></li>
+            <li class="list-link"><a href="/affiliates">推介计划</a></li>
+          </ul>
+          <!-- footer-list -->
+          <ul class="footer-list list-unstyled">
+            <li class="list-title">产品</li>
+            <li class="list-link"><a href="#">云服务器</a></li>
+            <li class="list-link"><a href="#">虚拟主机</a></li>
+            <li class="list-link"><a href="#">独立服务器</a></li>
+            <li class="list-link"><a href="#">SSL证书</a></li>
+            <li class="list-link"><a href="#">CDN内容分发</a></li>
+            <li class="list-link"><a href="#">域名注册</a></li>
+            <li class="list-link"><a href="#">其他服务</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- footer-middle -->
+    <div class="footer-middle">
+      <div class="container-fluid">
+        <!-- reg-bar -->
+        <div class="reg-bar text-md-left text-center">
+          <div class="d-lg-flex align-items-center justify-content-between">
+            <!-- text -->
+            <div class="text">
+              <!-- title-4 -->
+              <h4 class="title-4">即刻加入我们<br>节省高达50%的折扣</h4>
+              <!-- para-2 -->
+              <p class="para-2">一起进入智能化世界，开启云服务之旅，让您的业务飞速拓展</p>
+            </div>
+            <!-- buttons -->
+            <div class="buttons mt-lg-0 mt-3">
+              <a href="/cart" class="btn btn-fill-primary shadow-off text-uppercase font-500">选购产品</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer-bottom -->
+    <div class="footer-bottom">
+      <div class="container-fluid">
+        <!-- content -->
+        <div class="content d-flex align-items-start mb-2">
+          <!-- logo -->
+          <div class="logo mb-lg-0 mb-1">
+            <a href="#">
+              <img src="{$setting.web_logo}" class="img-fluid" alt="{$setting.company_name}"> <!-- 此处为logo， 大小在CSS中进行了限制 -->
+            </a>
+          </div>
+          <!-- copyright -->
+          <div class="copyright mr-lg-5">
+            <!-- links -->
+            <ul class="links list-unstyled d-flex align-items-center flex-wrap">
+              <li><a href="{$setting.web_tos_url}">使用条款</a></li>
+              <li><a href="{$setting.web_privacy_url}">服务合约</a></li>
+            </ul>
+            <!-- para-3 -->
+            <p class="para-3">Copyright © 2022, {$setting.company_name}.All Rights Reserved.</p>
+          </div>
+          <!-- social-list -->
+          <ul class="social-list list-unstyled d-flex align-items-center justify-content-lg-end justify-content-center ml-lg-auto mt-lg-0 mt-2">
+            <li><a href="#"><img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/footer/twitter.png" alt="Icon"></a></li>
+            <li><a href="#"><img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/footer/reddit.png" alt="Icon"></a></li>
+            <li><a href="#"><img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/footer/facebook.png" alt="Icon"></a></li>
+            <li><a href="#"><img src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/images/templates/footer/linkedin.png" alt="Icon"></a></li>
+          </ul>
+        </div>
+        <!-- content -->
+        <div class="content d-lg-flex align-items-end flex-wrap">
+          <!-- para-3 -->
+          <p class="para-3">使用本网站须遵守明确的使用条款。<br>使用本网站，即表示您同意受这些 <a href="{$setting.web_tos_url}">通用服务条款</a> 的约束.</p>
+          <!-- sign -->
+          <div class="signature ml-auto mt-lg-0 mt-1">
+            <p class="para-3">ICP备案号：<a href="#">{if $setting.company_record}{$setting.company_record}{else}暂无备案{/if}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+   <!--jquery-3.3.1.min.js -->
+  <script src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/js/jquery-3.3.1.min.js"></script> 
+   <!--jquery.lazy.min.js -->
+  <script src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/js/jquery.lazy.min.js"></script> 
+   <!--jQuery.cookies.js -->
+  <script src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/js/jQuery.cookies.js"></script>
+   <!--templates.js -->
+  <script src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/js/templates.js"></script>
+   <!--script.js -->
+  <script src="https://jsd.cdn.zzko.cn/gh/xiaoeyv/hostx/assets/js/script.js"></script>  
+</body>
+</html>
